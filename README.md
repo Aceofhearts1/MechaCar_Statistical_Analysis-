@@ -7,7 +7,7 @@
    - **Vehicle Length and Ground Clearance** provided a non-random amount of variance as determined by their extremely small p-values. Significantly under .05. 2.6x10<sup>-12</sup> and 5.21x10<sup>-8</sup> as seen with the green highlight and Top two black arrows.
 
 2. Is the slope of the linear model considered to be zero? Why or why not?
-   - The slope is not considered 0. The p-Value = 5.35x10<sup>-11</sup> Shown with the purple highlight and third arrow on the right side. That is enough to reject our null hypothesis. Significantly under .05% The coefficiants are not zero however close they may be.
+   - The slope is not considered 0. The  ***p-Value = 5.35x10<sup>-11</sup>*** Shown with the purple highlight and third arrow on the right side. That is enough to reject our null hypothesis. Significantly under .05% The coefficiants are not zero however close they may be.
 
 3. Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
    - The ```r-squared value = 0.7149``` which tells us that this model does predict the mpg of MechaCar prototypes effectively. The model is 71.5% accurate. I like higher numbers but that is not bad.
