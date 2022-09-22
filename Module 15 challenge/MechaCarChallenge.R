@@ -1,9 +1,9 @@
 ## Linear Regression to Predict MPG ##
 
-## load the dplyr package
+# load the dplyr package
 library(dplyr)
 
-## Import and read in the MechaCar_mpg.csv file as a dataframe
+# Import and read in the MechaCar_mpg.csv file as a dataframe
 mechacar_mpg <- read.csv(file='MechaCar_mpg.csv', check.names = F, stringsAsFactors = F)
 head(mechacar_mpg)
 
@@ -12,3 +12,21 @@ lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AW
 
 # summary function
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD ,data=mechacar_mpg))
+
+## Summary Statistics on Suspension Coils ##
+
+# import csv and read as a table
+Suspension_Coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors = F)
+head(Suspension_Coil)
+#stat summary with summarize()
+total_summary <- Suspension_Coil %>% summarize(Mean = mean(PSI),
+                                               Median = median(PSI), 
+                                               Variance = var(PSI), 
+                                               SD = sd(PSI), 
+                                               .groups = 'keep')
+# stat summary with group_by()
+lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI),
+                                                                             Median = median(PSI), 
+                                                                             Variance = var(PSI), 
+                                                                             SD = sd(PSI) , 
+                                                                             .groups = 'keep') 
